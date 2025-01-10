@@ -21,7 +21,7 @@ class Gallery extends Component {
         this.setState({
           isLoading: false,
         });
-        throw new Error();
+        throw new Error('ERROR something went wrong');
       }
     } catch (error) {
       console.log(error);
@@ -38,7 +38,7 @@ class Gallery extends Component {
   render() {
     return (
       <>
-        <h4 className="text-white mx-3">{this.props.title}</h4>
+        <h4 className="text-white mx-3 mt-4">{this.props.title}</h4>
         {this.state.isLoading && (
           <div className="d-flex justify-content-center align-items-center" style={{height: "18em"}}>
             <div className="spinner-border text-secondary" role="status">
