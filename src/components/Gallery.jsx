@@ -16,7 +16,6 @@ class Gallery extends Component {
           films: data.Search,
           isLoading: false,
         });
-        console.log(this.state.films);
       } else {
         this.setState({
           isLoading: false,

@@ -1,22 +1,37 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
+import Home from './pages/Home'
+import Settings from './pages/Settings'
+import Profile from './pages/Profile'
 import NavBar from './components/NavBar'
-import Footer from "./components/Footer"
-import Hero from './components/Hero'
-import Gallery from './components/Gallery'
+import Footer from './components/Footer'
+import { Component } from 'react'
 
-function App() {
+
+class App extends Component{
+  state= {
+    numberPage: 1,
+  }
+
+  changePage = (num) => {
+    this.setState({numberPage: num});
+  }
+
+render() {
   return (
     <>
-      <NavBar/>
-      <Hero/>
-      <Gallery title="Trending Now" film="harry potter"/>
-      <Gallery title="Watch it Again" film="star wars"/>
-      <Gallery title="New Releases" film="the lord of the rings"/>
-      <Footer/>
+      <NavBar changePage={this.changePage}/>
+      {this.state.numberPage == 1 ? (
+          <Home />
+        ) : this.state.numberPage == 2 ? (
+          <Settings />
+        ) : (
+          <Profile />
+        )}
+      <Footer />
     </>
-  )
+  )}
 }
 
 export default App

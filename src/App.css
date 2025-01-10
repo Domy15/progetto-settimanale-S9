@@ -59,3 +59,57 @@ footer {
 .col img:hover {
   transform: scale(1.1);
 }
+
+.main {
+  width: 35%;
+  margin: 0 auto;
+}
+
+::placeholder {
+  color: white;
+  font-size: 1.2em;
+}
+
+.checkbox {
+  position: relative;
+  top: 0.5em;
+  width: 1.8em;
+  height: 1.8em;
+  background-color: transparent;
+  border-radius: .25rem;
+  appearance: none;
+  cursor: pointer;
+  border: 2px solid #595959;
+}
+
+.checkbox:checked {
+  background-color: transparent;
+}
+
+.checkbox::before {
+  content:"";
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 6px;
+  height: 11px;
+  border: 3px solid transparent;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg) scale(1.5);
+}
+
+.checkbox:checked:before {
+  border-color: #595959;
+}
+
+.button {
+  background-color: #E2E2E2;
+  border: none;
+}
+
+@media screen and (min-width: 992px) {
+  .div{
+      width: 50%;
+  }
+}

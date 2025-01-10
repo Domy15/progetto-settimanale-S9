@@ -26,7 +26,7 @@ class NavBar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active fw-bold" href="#">Home</a>
+                <a className="nav-link active fw-bold" href="#" onClick={() => this.props.changePage(1)}>Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link fw-bold" href="#">TV Shows</a>
@@ -35,10 +35,10 @@ class NavBar extends Component {
                 <a className="nav-link fw-bold" href="#">Movies</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold" href="#">Recently Added</a>
+                <a className="nav-link fw-bold" href="#" onClick={() => this.props.changePage(2)}>Settings</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold" href="#">My List</a>
+                <a className="nav-link fw-bold" href="#" onClick={() => this.props.changePage(3)}>Profile</a>
               </li>
             </ul>
             <div className="d-flex align-items-center">
