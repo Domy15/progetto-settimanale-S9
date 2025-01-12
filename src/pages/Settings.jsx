@@ -52,14 +52,12 @@ function Settings() {
           </div>
         </div>
         <hr className="border border-secondary my-3" />
-        <div className="d-flex justify-content-between">
-          <div className="d-md-flex justify-content-between w-75">
-            <h2 className="h4 text-secondary me-3">PLAN DETAILS</h2>
-            <p className="text-black fw-bold">
+        <div className="row">
+            <h2 className="col h4 text-secondary me-3">PLAN DETAILS</h2>
+            <p className="col text-black fw-bold text-center">
               Standard <i className="bi bi-badge-hd"></i>
             </p>
-          </div>
-          <a href="javascript:void(0)">Change plan</a>
+          <a href="javascript:void(0)" className="col text-end">Change plan</a>
         </div>
         <hr className="border border-secondary my-3" />
         <div className="d-md-flex">
